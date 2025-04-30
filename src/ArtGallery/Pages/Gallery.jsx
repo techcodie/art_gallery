@@ -6,6 +6,7 @@ function Gallery({ artworks }) {
     const [selectedArtwork, setSelectedArtwork] = useState(null);
     const [favorites, setFavorites] = useState([]);
     const [filter, setFilter] = useState('all');
+    const [imageErrors, setImageErrors] = useState({});
 
     const categories = ['all', ...new Set(artworks.map(artwork => artwork.category))];
 
@@ -19,6 +20,13 @@ function Gallery({ artworks }) {
                 ? prev.filter(id => id !== artworkId)
                 : [...prev, artworkId]
         );
+    };
+
+    const handleImageError = (artworkId) => {
+        setImageErrors(prev => ({
+            ...prev,
+            [artworkId]: true
+        }));
     };
 
     return (
@@ -39,12 +47,19 @@ function Gallery({ artworks }) {
                 {filteredArtworks.map(artwork => (
                     <div key={artwork.id} className="artwork-card">
                         <div className="artwork-image-container" onClick={() => setSelectedArtwork(artwork)}>
-                            <img
-                                src={artwork.image}
-                                alt={artwork.title}
-                                className="artwork-image"
-                                loading="lazy"
-                            />
+                            {imageErrors[artwork.id] ? (
+                                <div className="image-error">
+                                    <span>Image not available</span>
+                                </div>
+                            ) : (
+                                <img
+                                    src={artwork.image}
+                                    alt={artwork.title}
+                                    className="artwork-image"
+                                    loading="lazy"
+                                    onError={() => handleImageError(artwork.id)}
+                                />
+                            )}
                             <div className="artwork-overlay">
                                 <span className="view-details">View Details</span>
                             </div>

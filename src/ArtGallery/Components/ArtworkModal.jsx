@@ -1,5 +1,5 @@
 import React from 'react';
-import './ArtworkModal.css';
+import '../Styles/ArtworkModal.css';
 
 function ArtworkModal({ artwork, onClose }) {
     if (!artwork) return null;
@@ -13,10 +13,10 @@ function ArtworkModal({ artwork, onClose }) {
                 </div>
                 <div className="modal-info">
                     <h2>{artwork.title}</h2>
-                    <p className="artist">{artwork.artist}</p>
-                    <p className="year">{artwork.year}</p>
-                    <p className="category">{artwork.category}</p>
-                    <p className="description">{artwork.description}</p>
+                    <p className="artist-name">{artwork.artist}</p>
+                    <p className="artwork-year">{artwork.year}</p>
+                    <p className="artwork-category">{artwork.category}</p>
+                    <p className="artwork-description">{artwork.description}</p>
                 </div>
             </div>
         </div>
