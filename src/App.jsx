@@ -7,6 +7,7 @@ import Home from './ArtGallery/Pages/Home'
 import Gallery from './ArtGallery/Pages/Gallery'
 import Artists from './ArtGallery/Pages/Artists'
 import About from './ArtGallery/Pages/About'
+import Footer from './ArtGallery/Components/Footer'
 
 function App() {
   const [artworks, setArtworks] = useState([])
@@ -100,24 +101,6 @@ function App() {
             category: 'Impressionism'
           },
           {
-            id: 10,
-            title: 'The Night Café',
-            artist: 'Vincent van Gogh',
-            image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Le_café_de_nuit.jpg/1200px-Le_café_de_nuit.jpg',
-            year: '1888',
-            description: 'The Night Café is an oil painting created by Dutch artist Vincent van Gogh in September 1888. Its title is inscribed lower right beneath the signature. The painting is owned by Yale University and is currently held at the Yale University Art Gallery in New Haven, Connecticut.',
-            category: 'Post-Impressionism'
-          },
-          {
-            id: 11,
-            title: 'The Last Supper',
-            artist: 'Leonardo da Vinci',
-            image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/%C3%9Altima_Cena_-_Da_Vinci_5.jpg/1200px-%C3%9Altima_Cena_-_Da_Vinci_5.jpg',
-            year: '1498',
-            description: 'The Last Supper is a mural painting by the Italian High Renaissance artist Leonardo da Vinci, dated to c. 1495–1498. The painting represents the scene of the Last Supper of Jesus with the Twelve Apostles.',
-            category: 'Renaissance'
-          },
-          {
             id: 12,
             title: 'The Great Wave off Kanagawa',
             artist: 'Katsushika Hokusai',
@@ -130,7 +113,7 @@ function App() {
             id: 13,
             title: 'The Garden of Earthly Delights',
             artist: 'Hieronymus Bosch',
-            image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/HieronymusBoschGardenofEarthlyDelights.jpg/1200px-HieronymusBoschGardenofEarthlyDelights.jpg',
+            image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/The_Garden_of_earthly_delights.jpg/1200px-The_Garden_of_earthly_delights.jpg',
             year: '1515',
             description: 'The Garden of Earthly Delights is the modern title given to a triptych oil painting on oak panel painted by the Early Netherlandish master Hieronymus Bosch, between 1490 and 1510.',
             category: 'Northern Renaissance'
@@ -139,25 +122,16 @@ function App() {
             id: 14,
             title: 'The Creation of Adam',
             artist: 'Michelangelo',
-            image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Michelangelo_-_Creation_of_Adam_%28cropped%29.jpg/1200px-Michelangelo_-_Creation_of_Adam_%28cropped%29.jpg',
+            image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Michelangelo_-_Creation_of_Adam_%28cropped%29.jpg/2880px-Michelangelo_-_Creation_of_Adam_%28cropped%29.jpg',
             year: '1512',
             description: 'The Creation of Adam is a fresco painting by Italian artist Michelangelo, which forms part of the Sistine Chapel\'s ceiling, painted c. 1508–1512. It illustrates the Biblical creation narrative from the Book of Genesis in which God gives life to Adam, the first man.',
             category: 'Renaissance'
           },
           {
-            id: 15,
-            title: 'Les Demoiselles d\'Avignon',
-            artist: 'Pablo Picasso',
-            image: 'https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Les_Demoiselles_d%27Avignon.jpg/1200px-Les_Demoiselles_d%27Avignon.jpg',
-            year: '1907',
-            description: 'Les Demoiselles d\'Avignon is a large oil painting created in 1907 by the Spanish artist Pablo Picasso. The work portrays five nude female prostitutes from a brothel on Carrer d\'Avinyó in Barcelona.',
-            category: 'Cubism'
-          },
-          {
             id: 16,
             title: 'The Son of Man',
             artist: 'René Magritte',
-            image: 'https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/The_Son_of_Man.jpg/1200px-The_Son_of_Man.jpg',
+            image: 'https://upload.wikimedia.org/wikipedia/en/e/e5/Magritte_TheSonOfMan.jpg',
             year: '1964',
             description: 'The Son of Man is a 1964 painting by the Belgian surrealist painter René Magritte. It is perhaps his best-known artwork. The painting consists of a man in an overcoat and a bowler hat standing in front of a low wall, beyond which is the sea and a cloudy sky.',
             category: 'Surrealism'
@@ -166,7 +140,7 @@ function App() {
             id: 17,
             title: 'American Gothic',
             artist: 'Grant Wood',
-            image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Grant_Wood_-_American_Gothic_-_Google_Art_Project.jpg/1200px-Grant_Wood_-_American_Gothic_-_Google_Art_Project.jpg',
+            image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Grant_Wood_-_American_Gothic_-_Google_Art_Project.jpg/960px-Grant_Wood_-_American_Gothic_-_Google_Art_Project.jpg',
             year: '1930',
             description: 'American Gothic is a 1930 painting by Grant Wood in the collection of the Art Institute of Chicago. Wood was inspired to paint what is now known as the American Gothic House in Eldon, Iowa, along with "the kind of people I fancied should live in that house."',
             category: 'Regionalism'
@@ -175,7 +149,7 @@ function App() {
             id: 18,
             title: 'The Thinker',
             artist: 'Auguste Rodin',
-            image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/The_Thinker%2C_Rodin.jpg/1200px-The_Thinker%2C_Rodin.jpg',
+            image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Mus%C3%A9e_Rodin_1.jpg/500px-Mus%C3%A9e_Rodin_1.jpg',
             year: '1902',
             description: 'The Thinker is a bronze sculpture by Auguste Rodin, usually placed on a stone pedestal. The work shows a nude male figure of heroic size sitting on a rock with his chin resting on one hand as though deep in thought, and is often used as an image to represent philosophy.',
             category: 'Sculpture'
@@ -184,20 +158,11 @@ function App() {
             id: 19,
             title: 'The School of Athens',
             artist: 'Raphael',
-            image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Raffaello_Sanzio_da_Urbino_-_The_School_of_Athens_-_Google_Art_Project.jpg/1200px-Raffaello_Sanzio_da_Urbino_-_The_School_of_Athens_-_Google_Art_Project.jpg',
+            image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg/960px-%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg',
             year: '1511',
             description: 'The School of Athens is a fresco by the Italian Renaissance artist Raphael. It was painted between 1509 and 1511 as a part of Raphael\'s commission to decorate the rooms now known as the Stanze di Raffaello, in the Apostolic Palace in the Vatican.',
             category: 'Renaissance'
           },
-          {
-            id: 20,
-            title: 'The Starry Night Over the Rhône',
-            artist: 'Vincent van Gogh',
-            image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Starry_Night_Over_the_Rhone.jpg/1200px-Starry_Night_Over_the_Rhone.jpg',
-            year: '1888',
-            description: 'Starry Night Over the Rhône is one of Vincent van Gogh\'s paintings of Arles at night. It was painted at a spot on the bank of the Rhône that was only a one or two-minute walk from the Yellow House on the Place Lamartine which van Gogh was renting at the time.',
-            category: 'Post-Impressionism'
-          }
         ]
         setArtworks(mockArtworks)
         setFilteredArtworks(mockArtworks)
@@ -240,6 +205,8 @@ function App() {
         <Route path="/artists" element={<Artists artworks={filteredArtworks} />} />
         <Route path="/about" element={<About />} />
       </Routes>
+
+      <Footer />
     </div>
   )
 }
